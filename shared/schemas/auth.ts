@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 export const loginSchema = z.object({
   email: z.string().email(),
@@ -20,7 +20,7 @@ export const authResponseSchema = z.object({
     email: z.string().email(),
     username: z.string(),
     avatarUrl: z.string().nullable(),
-    role: z.enum(['user', 'admin', 'moderator']),
+    role: z.enum(["user", "admin", "moderator"]),
     createdAt: z.string(),
     updatedAt: z.string(),
   }),
