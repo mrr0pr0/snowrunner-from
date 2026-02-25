@@ -36,47 +36,59 @@ export const users = pgTable("users", {
     .defaultNow(),
 });
 
-export const guides = pgTable('guides', {
-    id: uuid("id").primaryKey().defaultRandom(),
-    title: text('title').notNull(),
-    slug: text('slug').notNull().unique(),
-    content: text('content').notNull(),
-    mapId: text('map_id').notNull(),
-    mapName: text('map_name').notNull(),
-    authorId: uuid('author_id')
-        .notNull()
-        .references(() => users.id, { onDelete: 'cascade' }),
-    published: boolean('published').notNull().default(false),
-    createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
-    updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+export const guides = pgTable("guides", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  title: text("title").notNull(),
+  slug: text("slug").notNull().unique(),
+  content: text("content").notNull(),
+  mapId: text("map_id").notNull(),
+  mapName: text("map_name").notNull(),
+  authorId: uuid("author_id")
+    .notNull()
+    .references(() => users.id, { onDelete: "cascade" }),
+  published: boolean("published").notNull().default(false),
+  createdAt: timestamp("created_at", { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true })
+    .notNull()
+    .defaultNow(),
 });
 
-export const markers = pgTable('markers', {
-  id: uuid('id').primaryKey().defaultRandom(),
-  guideId: uuid('guide_id')
+export const markers = pgTable("markers", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  guideId: uuid("guide_id")
     .notNull()
-    .references(() => guides.id, { onDelete: 'cascade' }),
-  lat: real('lat').notNull(),
-  lng: real('lng').notNull(),
-  title: text('title').notNull(),
-  description: text('description'),
-  markerType: markerTypeEnum('marker_type').notNull().default('waypoint'),
-  orderIndex: integer('order_index').notNull().default(0),
-  createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
-  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+    .references(() => guides.id, { onDelete: "cascade" }),
+  lat: real("lat").notNull(),
+  lng: real("lng").notNull(),
+  title: text("title").notNull(),
+  description: text("description"),
+  markerType: markerTypeEnum("marker_type").notNull().default("waypoint"),
+  orderIndex: integer("order_index").notNull().default(0),
+  createdAt: timestamp("created_at", { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true })
+    .notNull()
+    .defaultNow(),
 });
 
-export const comments = pgTable('comments', {
-  id: uuid('id').primaryKey().defaultRandom(),
-  guideId: uuid('guide_id')
+export const comments = pgTable("comments", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  guideId: uuid("guide_id")
     .notNull()
-    .references(() => guides.id, { onDelete: 'cascade' }),
-  authorId: uuid('author_id')
+    .references(() => guides.id, { onDelete: "cascade" }),
+  authorId: uuid("author_id")
     .notNull()
-    .references(() => users.id, { onDelete: 'cascade' }),
-  content: text('content').notNull(),
-  createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(),
-  updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(),
+    .references(() => users.id, { onDelete: "cascade" }),
+  content: text("content").notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+  updatedAt: timestamp("updated_at", { withTimezone: true })
+    .notNull()
+    .defaultNow(),
 });
 
 export type UserSelect = InferSelectModel<typeof users>;
