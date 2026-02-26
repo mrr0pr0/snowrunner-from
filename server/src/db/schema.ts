@@ -9,8 +9,7 @@ import {
   pgEnum,
 } from "drizzle-orm/pg-core";
 import type { InferSelectModel, InferInsertModel } from "drizzle-orm";
-import { email } from "zod/v4";
-import { title } from "process";
+
 
 export const userRoleEnum = pgEnum("user_role", ["user", "admin", "moderator"]);
 export const markerTypeEnum = pgEnum("marker_type", [
