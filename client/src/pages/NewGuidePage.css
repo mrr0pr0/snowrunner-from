@@ -1,0 +1,83 @@
+.new-guide {
+  max-width: 640px;
+}
+
+.new-guide h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.75rem;
+}
+
+.new-guide-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.new-guide-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--text-muted, #aaa);
+}
+
+.new-guide-form input,
+.new-guide-form textarea {
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border, #333);
+  background: var(--input-bg, #1a1a1a);
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.new-guide-form textarea {
+  min-height: 200px;
+  resize: vertical;
+}
+
+.new-guide-form input:focus,
+.new-guide-form textarea:focus {
+  outline: none;
+  border-color: var(--brand, #e94560);
+}
+
+.new-guide-checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.new-guide-checkbox input {
+  width: auto;
+}
+
+.new-guide-form button {
+  padding: 0.75rem;
+  background: var(--brand, #e94560);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.new-guide-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.new-guide-error {
+  color: #e94560;
+  margin: 0;
+}
+
+.new-guide-login {
+  padding: 2rem;
+  text-align: center;
+}
+
+.new-guide-login a {
+  color: var(--brand, #e94560);
+}

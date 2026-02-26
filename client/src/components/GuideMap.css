@@ -1,0 +1,12 @@
+.guide-map {
+  width: 100%;
+  height: 320px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border, #333);
+}
+
+.guide-map .leaflet-container {
+  background: #1a1a2e;
+  font-family: inherit;
+}

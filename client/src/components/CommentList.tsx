@@ -1,6 +1,6 @@
-import type { FC } from "react";
-import type { CommentWithAuthor } from "../types/index.js";
-import './CommentList.css'
+import type { FC } from 'react';
+import type { CommentWithAuthor } from '../types/index.js';
+import './CommentList.css';
 
 export interface CommentListProps {
   comments: CommentWithAuthor[];
@@ -20,9 +20,7 @@ const CommentList: FC<CommentListProps> = ({
       {comments.map((c) => (
         <li key={c.id} className="comment-item">
           <div className="comment-header">
-            <span className="comment-author">
-              {c.author?.username ?? "Unknown"}
-            </span>
+            <span className="comment-author">{c.author?.username ?? 'Unknown'}</span>
             <span className="comment-date">
               {new Date(c.createdAt).toLocaleDateString()}
             </span>

@@ -1,0 +1,60 @@
+.guide-list-page {
+  padding: 0;
+}
+
+.guide-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.guide-list-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.guide-list-new {
+  padding: 0.5rem 1rem;
+  background: var(--brand, #e94560);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.guide-list-new:hover {
+  opacity: 0.9;
+}
+
+.guide-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.guide-list-error,
+.guide-list-loading,
+.guide-list-empty {
+  color: var(--text-muted, #888);
+  margin: 2rem 0;
+}
+
+.guide-list-error {
+  color: #e94560;
+}
+
+.guide-list-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.guide-list-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

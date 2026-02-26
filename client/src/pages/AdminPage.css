@@ -1,0 +1,49 @@
+.admin-page {
+  max-width: 720px;
+}
+
+.admin-page h1 {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+}
+
+.admin-info {
+  margin: 0 0 1rem;
+  color: var(--text-muted, #888);
+  font-size: 0.95rem;
+}
+
+.admin-filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-filters button.active {
+  background: var(--brand, #e94560);
+  color: #fff;
+  border-color: var(--brand, #e94560);
+}
+
+.admin-guide-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-guide-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border, #333);
+}
+
+.admin-guide-list li:last-child {
+  border-bottom: none;
+}
+
+.admin-guide-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted, #888);
+}

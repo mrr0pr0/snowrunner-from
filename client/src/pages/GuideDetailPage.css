@@ -1,0 +1,109 @@
+.guide-detail {
+  max-width: 720px;
+}
+
+.guide-detail-header {
+  margin-bottom: 1.5rem;
+}
+
+.guide-detail-header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+
+.guide-detail-meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted, #888);
+}
+
+.guide-detail-content {
+  margin-bottom: 2rem;
+}
+
+.guide-detail-body {
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.guide-detail-markers {
+  margin-bottom: 2rem;
+}
+
+.guide-detail-markers-list-title {
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.guide-detail-markers h2,
+.guide-detail-comments h2 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.guide-detail-markers ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.guide-detail-markers li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--text-muted, #aaa);
+}
+
+.guide-detail-comments {
+  border-top: 1px solid var(--border, #333);
+  padding-top: 1.5rem;
+}
+
+.guide-detail-comment-form {
+  margin-bottom: 1.5rem;
+}
+
+.guide-detail-comment-form textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border, #333);
+  background: var(--input-bg, #1a1a1a);
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.guide-detail-comment-form button {
+  padding: 0.5rem 1rem;
+  background: var(--brand, #e94560);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.guide-detail-comment-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.guide-detail-login-prompt {
+  margin-bottom: 1rem;
+  color: var(--text-muted, #888);
+}
+
+.guide-detail-loading,
+.guide-detail-error {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted, #888);
+}
+
+.guide-detail-error a {
+  color: var(--brand, #e94560);
+}
