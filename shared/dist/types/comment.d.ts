@@ -1,4 +1,4 @@
-import type { PublicUser } from '../dist/types/user.js';
+import type { PublicUser } from './user.js';
 /** Comment on a guide */
 export interface Comment {
     id: string;

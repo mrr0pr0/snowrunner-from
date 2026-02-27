@@ -8,7 +8,28 @@ Full-stack TypeScript forum for SnowRunner map guides: guides, markers (Leaflet 
 - **server/** – Node.js + Express + TypeScript (strict)
 - **shared/** – Types and Zod schemas used by both
 
-## Setup
+## Quick Start (Recommended)
+
+For a complete automated setup, use the provided scripts:
+
+**Windows:**
+```bash
+.\start-dev.bat
+```
+
+**Linux/macOS:**
+```bash
+chmod +x start-dev.sh
+./start-dev.sh
+```
+
+This script will:
+- Install dependencies (if needed)
+- Build the shared module
+- Run database migrations
+- Start both development servers
+
+## Manual Setup
 
 1. **Install dependencies** (from repo root):
 
