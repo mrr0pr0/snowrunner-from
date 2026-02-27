@@ -36,7 +36,7 @@ REM Setup database
 echo 🗄️ Setting up database...
 cd server
 echo Running database migrations...
-pnpm run db:push
+set DATABASE_URL=%DATABASE_URL%&& pnpm run db:push
 cd ..
 
 REM Start development servers
